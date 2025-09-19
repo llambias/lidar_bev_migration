@@ -1,0 +1,2 @@
+string marker_type
+Point marker_center

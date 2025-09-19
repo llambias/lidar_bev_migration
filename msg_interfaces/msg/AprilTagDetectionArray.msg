@@ -1,0 +1,4 @@
+std_msgs/Header header
+AprilTagDetection[] detections
+int32 original_image_width
+int32 original_image_height

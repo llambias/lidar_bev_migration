@@ -1,0 +1,4 @@
+RNMarker[] detected_markers
+std_msgs/Header header
+int32 original_image_height
+int32 original_image_width
