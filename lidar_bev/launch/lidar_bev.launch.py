@@ -10,9 +10,12 @@ def generate_launch_description():
     # Declare all launch arguments
     return LaunchDescription([
 
+        # Tópicos
         DeclareLaunchArgument('cloud_topic', default_value='/wamv/sensors/lidars/ouster_lidar_sensor/points'),
         DeclareLaunchArgument('lidar_tf_frame', default_value='/wamv/wamv/base_link/ouster_lidar_sensor'),
         DeclareLaunchArgument('camera_tf_frame', default_value='/stereo_camera'),
+        
+        # Map configuration
         DeclareLaunchArgument('camera_fov', default_value='110.0'),
         DeclareLaunchArgument('intensity_threshold', default_value='0.05'),
         DeclareLaunchArgument('cell_size', default_value='0.05'),
@@ -24,6 +27,8 @@ def generate_launch_description():
         DeclareLaunchArgument('height_threshold', default_value='0.10'),
         DeclareLaunchArgument('crop_180', default_value='true'),
         DeclareLaunchArgument('remove_floor', default_value='false'),
+        
+        # HDL -32E  ->  "El sensor Lidar de Detección de Peligros (HDL) es un sistema de imágenes 3D basado en láser que escanea una superficie para crear un mapa 3D del campo de aterrizaje."
         DeclareLaunchArgument('planes', default_value='32'),
         DeclareLaunchArgument('h_res', default_value='0.2'),
         DeclareLaunchArgument('v_res', default_value='1.33'),
@@ -58,3 +63,6 @@ def generate_launch_description():
             }]
         )
     ])
+
+
+# Más información de cómo migrar launch files: https://docs.ros.org/en/humble/How-To-Guides/Migrating-from-ROS1/Migrating-Launch-Files.html
