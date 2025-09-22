@@ -13,21 +13,21 @@ find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)  # Add sensor_msgs here
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Buoy.msg"
-  "msg/BuoyArray.msg"
-  "msg/Object.msg"
-  "msg/ObjectArray.msg"
-  "msg/AudioData.msg"
-  "msg/NavInfo.msg"
-  "msg/WamvPose.msg"
-  "msg/AprilTagDetection.msg"        # UAV
-  "msg/AprilTagDetectionArray.msg"   # UAV
-  "msg/CanDetection.msg"             # UAV
-  "msg/CanDetectionArray.msg"        # UAV
-  "msg/Point.msg"                    # UAV
-  "msg/LandingPadDetection.msg"      # UAV
-  "msg/RNMarker.msg"                 # UAV
-  "msg/RNMarkerDetectionArray.msg"   # UAV
+  # "msg/Buoy.msg"
+  # "msg/BuoyArray.msg"
+  # "msg/Object.msg"
+  # "msg/ObjectArray.msg"
+  # "msg/AudioData.msg"
+  # "msg/NavInfo.msg"
+  # "msg/WamvPose.msg"
+  # "msg/AprilTagDetection.msg"        # UAV
+  # "msg/AprilTagDetectionArray.msg"   # UAV
+  # "msg/CanDetection.msg"             # UAV
+  # "msg/CanDetectionArray.msg"        # UAV
+  # "msg/Point.msg"                    # UAV
+  # "msg/LandingPadDetection.msg"      # UAV
+  # "msg/RNMarker.msg"                 # UAV
+  # "msg/RNMarkerDetectionArray.msg"   # UAV
   "msg/Obstacle.msg"                
   "msg/ObstacleList.msg"           
   # "srv/DroneBridge.srv"
