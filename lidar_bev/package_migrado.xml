@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>lidar_bev</name>
+  <version>0.0.1</version>
+  <description>The lidar_bev package</description>
+  <author>Jorge Beltrán</author>
+  <author>Carlos Guindel</author>
+  <author>Francisco M. Moreno</author>
+  <author>Daniel Cruzado</author>
+  <author>Irene Cortés</author>
+  <maintainer email="jbeltran@ing.uc3m.es">Jorge Beltran</maintainer>
+  <maintainer email="cguindel@ing.uc3m.es">Carlos Guindel</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>pcl_ros</build_depend>
+  <build_depend>rosbag</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf2_msgs</build_depend>
+  <build_depend>tf</build_depend>
+
+  <!-- Replaced run_depend with build_export_depend and exec_depend -->
+  <build_export_depend>cv_bridge</build_export_depend>
+  <build_export_depend>image_transport</build_export_depend>
+  <build_export_depend>pcl_ros</build_export_depend>
+  <build_export_depend>rosbag</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
+  <build_export_depend>tf2_msgs</build_export_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>pcl_ros</exec_depend>
+  <exec_depend>rosbag</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>tf2_msgs</exec_depend>
+  <!-- Some dependencies must be updated, including sensor_msgs and tf. -->
+  <!-- Some build_depend and exec_depend could be removed, depending on where the dependency is used. -->
+  <!-- See more in https://docs.ros.org/en/humble/How-To-Guides/Migrating-from-ROS1/Migrating-Package-XML.html-->
+  <!-- It is also possible to simplify code using the <depend> tag, but it is not necesarry.-->
+
+</package>
