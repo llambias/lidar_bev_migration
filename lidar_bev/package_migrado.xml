@@ -12,7 +12,9 @@
   <maintainer email="cguindel@ing.uc3m.es">Carlos Guindel</maintainer>
 
   <license>TODO</license>
-
+  <depend>image_transport</depend>
+  <depend>pcl_conversions </depend>
+  <depend>rclcpp</depend>
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>cv_bridge</build_depend>
   <build_depend>image_transport</build_depend>

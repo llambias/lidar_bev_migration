@@ -10,10 +10,14 @@
 
 #include <opencv2/opencv.hpp>
 
-#include <ros/package.h>
-#include <pcl_ros/point_cloud.h>
-#include <tf/transform_listener.h>
+#include "rclcpp/rclcpp.hpp"
+#include <pcl_conversions.h>
 
+#include "geometry_msgs/msg/transform_stamped.hpp"
+#include "tf2/transform_listener.h"
+#include "tf2/exceptions.h"
+#include "tf2_ros/transform_listener.h"
+#include "tf2_ros/buffer.h"
 
 class CloudFilter
 {
@@ -52,7 +56,7 @@ public:
     void initMaxPointsMap(int grid_dim, float cell_size, float z_min, float z_max, int num_slices, int planes,
                           float low_angle, float h_res, float v_res);
 
-    tf::StampedTransform getBaseVeloTF(){
+    geometry_msgs::msg::TransformStamped getBaseVeloTF(){
         return base_velo_transform_;
     }
 
@@ -61,11 +65,15 @@ private:
     pcl::PointCloud<pcl::PointXYZI>::Ptr cloud_ptr_;
 
     // Transform between the veloyne and the camera. Needed to remove points out of the camera range.
-    tf::StampedTransform velo_cam_transform_;
+    geometry_msgs::msg::TransformStamped velo_cam_transform_;
     // Transform between the veloyne and the camera. Needed to know the height
-    tf::StampedTransform base_velo_transform_;
+    geometry_msgs::msg::TransformStamped base_velo_transform_;
     // Trasform listener to get the TFs
-    tf::TransformListener* tf_;
+    tf_buffer_ =
+      std::make_unique<tf2_ros::Buffer>(this->get_clock());
+    
+    tf_ =
+      std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
 
     // Float storing max expected intensity value on input pointcloud
     float max_expected_intensity_;
